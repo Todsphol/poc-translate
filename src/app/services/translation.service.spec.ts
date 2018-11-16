@@ -32,8 +32,9 @@ describe('TranslationService', () => {
 
   it('', () => {
     const service = new TranslationService();
+    service.setLanguage('th');
     service.setTranslationTable({
-      'mm': {
+      'th': {
         'test': 'สวัสดี'
       },
       'en': {
@@ -41,8 +42,7 @@ describe('TranslationService', () => {
       }
     });
     const result = service.translate('test');
-
-    expect(result).toBe('test');
+    expect(result).toBe('สวัสดี');
   });
 
   it('', () => {
